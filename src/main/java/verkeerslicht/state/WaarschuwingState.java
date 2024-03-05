@@ -13,7 +13,7 @@ public class WaarschuwingState extends VerkeerslichtState {
     }
 
     @Override
-    public void entry() {
+    protected void entry() {
         laatsteKnipper = entryTijd;
         laatsteStatus = true;
         verkeerslicht.setGeel(true);
@@ -30,7 +30,7 @@ public class WaarschuwingState extends VerkeerslichtState {
     }
 
     @Override
-    public void exit() {
+    protected void exit() {
         verkeerslicht.setGeel(false);
     }
 

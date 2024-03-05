@@ -14,7 +14,7 @@ public abstract class VerkeerslichtState {
 
     protected abstract void entry();
 
-    protected abstract void doe();
+    public abstract void doe();
 
     protected abstract void exit();
 }

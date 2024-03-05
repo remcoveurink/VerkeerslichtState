@@ -10,7 +10,7 @@ public class RemmenState extends VerkeerslichtState {
     }
 
     @Override
-    public void entry() {
+    protected void entry() {
         verkeerslicht.setGeel(true);
     }
 
@@ -23,7 +23,7 @@ public class RemmenState extends VerkeerslichtState {
     }
 
     @Override
-    public void exit() {
+    protected void exit() {
         verkeerslicht.setGeel(false);
     }
 

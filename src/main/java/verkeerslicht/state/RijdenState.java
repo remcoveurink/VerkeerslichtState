@@ -10,7 +10,7 @@ public class RijdenState extends VerkeerslichtState {
     }
 
     @Override
-    public void entry() {
+    protected void entry() {
         verkeerslicht.setGroen(true);
     }
 
@@ -23,7 +23,7 @@ public class RijdenState extends VerkeerslichtState {
     }
 
     @Override
-    public void exit() {
+    protected void exit() {
         verkeerslicht.setGroen(false);
     }
 
