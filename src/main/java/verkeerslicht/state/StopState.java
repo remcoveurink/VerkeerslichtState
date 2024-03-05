@@ -17,7 +17,8 @@ public class StopState extends VerkeerslichtState {
     @Override
     public void doe() {
         if(System.currentTimeMillis() - entryTijd > STOP_INTERVAL) {
-            exit(new RijdenState(verkeerslicht));
+            exit();
+            verkeerslicht.setState(new RijdenState(verkeerslicht));
         }
     }
 
@@ -28,6 +29,7 @@ public class StopState extends VerkeerslichtState {
 
     @Override
     public void afhandelenInput(String input) {
-        exit(new WaarschuwingState(verkeerslicht));
+        exit();
+        verkeerslicht.setState(new WaarschuwingState(verkeerslicht));
     }
 }

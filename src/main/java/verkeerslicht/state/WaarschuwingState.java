@@ -36,6 +36,7 @@ public class WaarschuwingState extends VerkeerslichtState {
 
     @Override
     public void afhandelenInput(String input) {
-        exit(new StopState(verkeerslicht));
+        exit();
+        verkeerslicht.setState(new StopState(verkeerslicht));
     }
 }

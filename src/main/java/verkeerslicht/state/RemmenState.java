@@ -17,7 +17,8 @@ public class RemmenState extends VerkeerslichtState {
     @Override
     public void doe() {
         if(System.currentTimeMillis() - entryTijd > REM_INTERVAL) {
-            exit(new StopState(verkeerslicht));
+            exit();
+            verkeerslicht.setState(new StopState(verkeerslicht));
         }
     }
 

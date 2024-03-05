@@ -12,11 +12,6 @@ public abstract class VerkeerslichtState {
 
     public abstract void afhandelenInput(String input);
 
-    public void exit(VerkeerslichtState nieuweState) {
-        exit();
-        verkeerslicht.setState(nieuweState);
-    }
-
     protected abstract void entry();
 
     protected abstract void doe();
