@@ -29,6 +29,9 @@ public class Verkeerslicht {
         this.groen = groen;
     }
 
+    /**
+     * deze functie kan eventueel ook intern periodiek worden aangeroepen
+     */
     public synchronized void periodiekeTrigger() {
         huidigeState.doe();
     }
